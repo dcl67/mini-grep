@@ -1,0 +1,13 @@
+mini_grep.c
+This file takes four command-line arguments and recursively searches the directory and sub-directories.
+To compile: 
+	gcc -o mini_grep mini_grep.c queue_utils.c -std=c99 -lpthread -Wall
+
+Run by calling the file, entering the string to search for, entering the pathto search, specify the number of threads desired, and whether you would like to use the static or dynamic search method to search.
+
+To run: ./mini_grep <string> /<file>/<path>/ <num_threads> <static/dynamic>
+Examples: 
+	./mini grep lui /home/DREXEL/mdl45/ 4 static
+	./mini grep lui /home/DREXEL/mdl45/ 4 dynamic
+
+Upon running, the search will kick off in a single-threaded serial search, then run as a multithreaded static or dynamic search, depending on your specification. The run-time will then be displayed, which you can compare with the serial search in the output. Multithreading will decrease the search time elapsed.
